@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(42, 120, 165);
+        }
+        form{
+            right: 3000px;
+            width: 300px;
+            margin: 200px auto;
+            text-align: center;
+            border: 2px solid black;
+            transition:  0.7s;
+        }
+        form:hover{
+            background-color: rgb(131, 190, 190);
+            transform: scale(1.2);
+        }
+        input{
+            display: block;
+            margin: 10px auto;
+            width: 250px;
+            height: 30px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: -10%;
+            padding-top: 5%;
+            margin-bottom: 5%;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            border: 2px solid black;
+            background-color: s;
+            background-color: rgb(184, 250, 114);
+            transition:  0.7s;
+        }
+        a:hover{
+            background-color: rgb(114, 250, 177);
+            transform: scale(1.5);
+            transform: rotate(15deg);
+
+        }
+        #enviar{
+            background-color: rgb(190, 230, 181);
+            transition:  0.7s;
+        }
+        #enviar:hover{
+            transform: scale(1.2);
+            transform: rotate(15deg);
+
+        }
+    </style>
+</head>
+<body>
+<div class="caixa">
+    <form>
+        <h1>Faça seu login aqui</h1> 
+        <br>
+        
+        <input type="text" placeholder="login" id="login">
+        <input type="password" placeholder="senha" id="senha">
+        <input id="enviar" type="submit" onclick="logar(); return false">
+        <a href="https://luis-fellipe-pepa.github.io/pagina-de-vendas/">ADIQUIRIR</a>
+        <br><br>
+    </form>
+</div>
+    <script>
+        function logar(){
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "admin" && senha == "admin"){
+                alert('sucesso');
+                location.href = "https://luis-fellipe-pepa.github.io/PAGIA-PRINCIAPAL/";
+            }else{
+                alert('usuario ou senha incorreto');
+            }
+        }
+    </script>
+</body>
+</html>
